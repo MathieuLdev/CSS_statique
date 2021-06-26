@@ -43,6 +43,15 @@ h1 {
     margin: 20px 20px;
 }
 
+.img-article{
+    filter: brightness(0.6);
+    cursor: pointer;
+}
+
+.img-article:hover{
+    filter: brightness(1);
+}
+
 .article{
     display: flex;
     flex-direction: row;
@@ -63,6 +72,11 @@ h1 {
     color: black;
     font-weight: bolder;
     text-shadow:0px 0px 20px rgb(255 255 255 / 49%);
+    cursor: pointer;
+}
+
+.title-article:hover{
+    color:cadetblue;
 }
 
 .info-article{
@@ -79,25 +93,17 @@ h1 {
     right: 10px;
     top: 10px;
     background: #811b09;
-    padding: 6px 14px;
-    border-radius: 55%;
+    padding: 4px 10px;
+    border-radius: 150px 150px 150px 0px;
     box-shadow: 2px 2px 15px rgba(192, 189, 189, 0.301);
+    cursor: pointer;
 }
 
-.comments-article:after {
-	content: '';
-	position: absolute;
-	bottom: 55%;
-	left: 65%;
-	border: 15px solid transparent;
-	border-top-color: #811b09;
-	border-bottom: 0;
-	border-left: 0;
-	margin-left: -17.5px;
-	margin-bottom: -35px;
+.comments-article:hover{
+    filter: brightness(1.5);
 }
 
-@media (max-width: 710px){
+@media screen and (max-width: 710px){
     .img-article{
         display: none;
     }
