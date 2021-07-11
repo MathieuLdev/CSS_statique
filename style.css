@@ -169,7 +169,7 @@ p::selection{
 }
  
 
-/********************** Formulaire ************************/
+/********************** Formulaire ***********************/
 
 .form-container {
     width: 90%;
@@ -198,7 +198,7 @@ form {
 }
 
 form label {
-    font-size: 1.3rem;
+    font-size: 1.3rem; 
 }
 
 form input{
