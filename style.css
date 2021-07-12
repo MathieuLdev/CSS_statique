@@ -66,6 +66,7 @@ h2:before{
 
 p::selection{
     background: var(--color2);
+    color: var(--color4);
 }
 
 
@@ -95,7 +96,7 @@ p::selection{
 
 
 
-
+/****************************** Accueil *********************************/
 
 .info {
     width: 80%;
@@ -177,15 +178,50 @@ p::selection{
     min-width: 400px;
     margin: 80px auto;
     padding: 15px;
-    background-color: #cecbd4b8;
+    /* background-color: #cecbd4b8; */
+    background: url(./assets/form-background.jpg) no-repeat center/cover;
     color: var(--color3);
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.form-container p {
+.form-container::after {
+    content: "\2709";
+    position: absolute;
+    font-size: 2.5rem;
+    right: 20px;
+    top: 15px;
+}
+
+@media screen and (max-width: 600px){
+    .form-container::after{
+        display: none;
+    }
+}
+
+.contact {
+    position: relative;
     font-size: 2.8rem;
+}
+
+.contact-title::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: var(--color3);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    animation: contact-anim 4s ease-in-out forwards;
+}
+
+@keyframes contact-anim {
+    100% {
+        transform: translateX(-50%) scaleX(1);
+    }
 }
 
 form {
@@ -195,6 +231,7 @@ form {
     width: 90%;
     max-width: 350px;
     min-width: 300px;
+    position: relative;
 }
 
 form label {
@@ -222,3 +259,21 @@ textarea {
     font-size: 1.4rem;
     color: var(--color3);
 }
+
+input[type="submit"] {
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: solid 3px black hidden;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--color2);
+    letter-spacing: 2px;
+    border: solid 3px var(--color3);
+}
+
+input[type="submit"]:active {
+    transform: scale(1.1);
+}
+
