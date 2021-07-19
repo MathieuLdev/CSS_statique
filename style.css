@@ -249,8 +249,9 @@ form input{
     color: var(--color3);
 }
 
-form input:focus{
-    background-color: var(--color2);
+form input[type="text"]:focus, form input[type="email"]:focus{
+    background-color: var(--color1);
+    color: var(--color6);
 }
 
 textarea {
@@ -262,20 +263,24 @@ textarea {
 }
 
 input[type="submit"] {
-    margin-top: 20px;
+    margin: 20px auto;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.2s;
     border: solid 3px black hidden;
+    width: 200px;
+    border-radius: 50px;
 }
 
 input[type="submit"]:hover {
-    background-color: var(--color2);
+    background-color: var(--color3);
     letter-spacing: 2px;
-    border: solid 3px var(--color3);
+    border: solid 3px var(--color5);
+
+    color: var(--color1);
 }
 
 input[type="submit"]:active {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 #message {
